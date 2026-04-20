@@ -1,7 +1,7 @@
 import express from "express"
 import userRouter from "./userRouter"
-import chatSocket from "../services/chat.service"
+import adminRouter from "./adminRouter"
 const router = express()
 router.use("/user", userRouter)
-router.use("/chat-with-agent", chatSocket)
+router.use("/admin", adminRouter)
 export default router

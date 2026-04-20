@@ -1,4 +1,4 @@
-import { Document } from "mongoose"
+import { Document, Types } from "mongoose"
 
 export declare namespace IUser {
   interface IWork {
@@ -59,4 +59,20 @@ export declare namespace IUser {
     SSN: string
   }
   interface Doc extends Document, create {}
+  interface query {
+    _id?: Types.ObjectId | string
+    name?: string
+    email?: string
+    positionApplied?: string
+    isEducated?: boolean
+    authorizedToWork?: boolean
+    UScitizen?: boolean
+    workedHereBefore?: boolean
+    isDrugBackgroundCheck?: boolean
+    isDrugBackgroundCheckPassed?: boolean
+    usesIllegalDrugs?: boolean
+    isConvictedToFelony?: boolean
+    page?: number
+    limit?: number
+  }
 }

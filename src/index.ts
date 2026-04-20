@@ -2,7 +2,6 @@ import "dotenv/config"
 import express from "express"
 import http from "http"
 import { Server } from "socket.io"
-import path from "path"
 import router from "./router/router"
 import { connection } from "./connection/connection"
 import chatSocket from "./services/chat.service"
@@ -15,6 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use("/api/v1", router)
+
 
 chatSocket(io)
 
