@@ -1,5 +1,5 @@
 import "dotenv/config"
-import express from "express"
+import express, { NextFunction, Request, Response } from "express"
 import http from "http"
 import { Server } from "socket.io"
 import router from "./router/router"
@@ -12,12 +12,17 @@ const io = new Server(server)
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-
+app.use(express.static("public"))
 app.use("/api/v1", router)
-
 
 chatSocket(io)
 
+app.use((error: any, req: Request, res: Response, next: NextFunction) => {
+  res.status(error.statusCode || 500).json({
+    success: false,
+    message: error.message || "Internal Server Error",
+  })
+})
 connection()
   .then(() => {
     server.listen(process.env.PORT || 8080, () => {

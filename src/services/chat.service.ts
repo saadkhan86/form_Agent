@@ -26,8 +26,19 @@ export default function chatSocket(io: Server) {
 
       if (node?.validate === "date") {
         const parts = msg.split(/[\/\-]/)
-        if (parts.length === 3)
-          formattedMsg = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`)
+        if (parts.length === 3 && parts[0] && parts[1] && parts[2]) {
+          const day = parseInt(parts[0].trim(), 10)
+          const month = parseInt(parts[1].trim(), 10) - 1
+          const year = parseInt(parts[2].trim(), 10)
+          formattedMsg = new Date(year, month, day)
+        } else {
+          formattedMsg = new Date(msg)
+        }
+        
+        if (formattedMsg instanceof Date && isNaN(formattedMsg.getTime())) {
+          socket.emit("bot", "Invalid date value. Please try again (dd/mm/yyyy).")
+          return
+        }
       } else if (node?.validate === "boolean") {
         formattedMsg = ["yes", "true", "1"].includes(msg.toLowerCase())
       } else if (node?.validate === "number") {

@@ -1,21 +1,19 @@
-import { Request, Response } from "express"
+import { NextFunction, Request, Response } from "express"
 import { IUser } from "../interfaces/IUser"
 import userRepo from "../repositories/userRepo"
-import mongoose from "mongoose"
 
 const formController = {
-  create: async (req: Request, res: Response) => {
+  create: async (req: Request, res: Response, next: NextFunction) => {
     try {
-      let user: IUser.create = req.body.user
+      let user: IUser.create = req.body
       user = await userRepo.create(user)
-      res
-        .status(200)
-        .json({ success: true, message: "User created successfully", user })
+      res.status(200).json({
+        success: true,
+        message: "User created successfully",
+        user: req.body,
+      })
     } catch (error) {
-      if (error instanceof mongoose.Error) {
-        console.log(error)
-      }
-      res.status(500).json({ success: false, error })
+      next(error, req, res)
     }
   },
 }
