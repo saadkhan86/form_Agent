@@ -1,4 +1,6 @@
 export function saveAnswer(session: any, step: string, answer: any) {
+  if (!step) return;
+
   if (step.startsWith("education.")) {
     const key = step.replace("education.", "")
     session.data.education = session.data.education || {}

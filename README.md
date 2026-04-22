@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines=AI+Agent+Requirement+Collector;Node.js+Backend+Project;Automated+User+Flow+System" />
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines=AI+Agent+Requirement+Collector;Node.js+Backend+Project;Automated+User+Flow+System;AI+Form+Collector;Apply FOR JOB With Agent" />
 </p>
 
 ![API](https://img.shields.io/badge/API-REST-blue?style=for-the-badge)

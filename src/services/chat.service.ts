@@ -15,6 +15,10 @@ export default function chatSocket(io: Server) {
     socket.on("user-message", async (msg: string) => {
       const session = getSession(socket.id)
 
+      if (!session || !session.step || session.step === "end") {
+        return
+      }
+
       const validation = validateAnswer(session.step, msg)
       if (!validation.valid) {
         socket.emit("bot", validation.message)
