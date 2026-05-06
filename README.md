@@ -1,4 +1,4 @@
-# Storino 🚀
+# Storino 
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00F7FF&center=true&vCenter=true&width=600&lines=Storino+-+AI+Requirement+Collector;Intelligent+Form+Automation;Real-time+AI+Agent+Workflow;Seamless+Data+Gathering;Your+AI+Assistant+for+Jobs" />
@@ -15,19 +15,19 @@
 
 ---
 
-## 🌟 Overview
+##  Overview
 
 **Storino** is an advanced AI-powered requirement collector designed to streamline data gathering and form-filling processes. Built with a modern Node.js backend and an agent-based architecture, Storino automates user workflows, making it ideal for job applications, survey collection, and complex data entry tasks.
 
-## ✨ Key Features
+##  Key Features
 
-- 🤖 **AI-Driven Collection**: Intelligent agent logic to gather specific requirements from users.
-- ⚡ **Real-time Interaction**: Seamless communication using Socket.io for live AI-user dialogues.
-- 📄 **Automated Form Handling**: Simplified logic to create and manage user-submitted data.
-- 🔒 **Robust Backend**: Powered by Express.js and TypeScript for a scalable and type-safe environment.
-- 💾 **Persistent Storage**: MongoDB integration via Mongoose for efficient data management.
+-  **AI-Driven Collection**: Intelligent agent logic to gather specific requirements from users.
+-  **Real-time Interaction**: Seamless communication using Socket.io for live AI-user dialogues.
+-  **Automated Form Handling**: Simplified logic to create and manage user-submitted data.
+-  **Robust Backend**: Powered by Express.js and TypeScript for a scalable and type-safe environment.
+-  **Persistent Storage**: MongoDB integration via Mongoose for efficient data management.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Runtime**: Node.js
 - **Framework**: Express.js
@@ -36,7 +36,7 @@
 - **Real-time**: Socket.io
 - **Development**: Nodemon, TSX
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -69,7 +69,7 @@
    npm run dev
    ```
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 src/
@@ -84,7 +84,7 @@ src/
 └── index.ts        # Application entry point
 ```
 
-## 👨‍💻 Author
+##  Author
 
 **Saad Muhammad Bin Ramzan**
 
